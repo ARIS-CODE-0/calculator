@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | Aris Calc ⚡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><span>⚡</span> Aris Calc</a>
+    </nav>
+
+    <div class="payment-container">
+        <h2 style="text-align: center; margin-bottom: 10px;">Secure Checkout</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Enter your details to unlock the calculator.</p>
+        
+        <form id="payment-form">
+            <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="4242 4242 4242 4242" required>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-pay">Unlock Now ⚡</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('payment-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert("Payment processed successfully! (Simulated)");
+            localStorage.setItem('aris_calc_paid', 'true');
+            window.location.href = 'app.html';
+        };
+    </script>
+</body>
+</html>

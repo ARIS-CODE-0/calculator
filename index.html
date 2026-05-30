@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aris Calc Web ⚡</title>
+    <title>Aris Calc ⚡ | The Ultimate Computation Experience</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <div id="previous-operand"></div>
-            <div id="current-operand">0</div>
+    <nav>
+        <a href="index.html" class="logo"><span>⚡</span> Aris Calc</a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="app.html" class="btn-primary">Launch App</a>
         </div>
-        <div class="buttons">
-            <button class="span-two" onclick="clearDisplay()">AC</button>
-            <button onclick="deleteLast()">DEL</button>
-            <button class="operator" onclick="chooseOperator('÷')">÷</button>
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button class="operator" onclick="chooseOperator('×')">×</button>
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button class="operator" onclick="chooseOperator('-')">-</button>
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button class="operator" onclick="chooseOperator('+')">+</button>
-            <button onclick="appendNumber('0')">0</button>
-            <button onclick="appendNumber('.')">.</button>
-            <button class="span-two equals" onclick="compute()">=</button>
+    </nav>
+
+    <section class="hero">
+        <h1>Calculation, but make it <br>Premium.</h1>
+        <p>Stop using boring system calculators. Experience the raw power of Aris Calc 2.0. Optimized for elite mathematicians and people who just like pretty buttons.</p>
+        <a href="pricing.html" class="btn-primary" style="padding: 15px 40px; font-size: 1.2rem; text-decoration: none;">Get Unlimited Access</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h3>⚡ Ultra-Low Latency</h3>
+            <p>Our proprietary JS engine ensures that 2+2 equals 4 in approximately 0.00001ms. Blazing fast.</p>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <div class="feature-card">
+            <h3>🌙 Dark Mode by Default</h3>
+            <p>Because staring at a white screen while calculating your taxes is just too much pain.</p>
+        </div>
+        <div class="feature-card">
+            <h3>📱 Cloud Sync (Coming soon)</h3>
+            <p>Imagine your calculations following you across the web. Absolute game changer.</p>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: var(--text-muted);">
+        <p>&copy; 2026 Aris Calc Inc. All rights reserved. No refunds.</p>
+    </footer>
 </body>
 </html>
