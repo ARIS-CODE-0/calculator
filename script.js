@@ -1,6 +1,7 @@
 let currentOperand = '0';
 let previousOperand = '';
 let operation = undefined;
+let shouldResetScreen = false;
 
 const currentTextElement = document.getElementById('current-operand');
 const previousTextElement = document.getElementById('previous-operand');
@@ -16,7 +17,10 @@ function updateDisplay() {
 
 function appendNumber(number) {
     if (number === '.' && currentOperand.includes('.')) return;
-    if (currentOperand === '0' && number !== '.') {
+    if (shouldResetScreen) {
+        currentOperand = number.toString();
+        shouldResetScreen = false;
+    } else if (currentOperand === '0' && number !== '.') {
         currentOperand = number.toString();
     } else {
         currentOperand = currentOperand.toString() + number.toString();
@@ -65,6 +69,7 @@ function compute() {
     currentOperand = computation.toString();
     operation = undefined;
     previousOperand = '';
+    shouldResetScreen = true;
     updateDisplay();
 }
 
